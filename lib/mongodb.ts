@@ -6,15 +6,12 @@ if (!process.env.MONGODB_URI) {
 
 const uri = process.env.MONGODB_URI
 const options = {
-  ssl: true,
-  tls: true,
-  tlsAllowInvalidCertificates: true,
-  tlsAllowInvalidHostnames: true,
-  retryWrites: true,
-  w: 'majority',
   maxPoolSize: 10,
   serverSelectionTimeoutMS: 5000,
   socketTimeoutMS: 45000,
+  bufferMaxEntries: 0,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 }
 
 let client
