@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Walletway - Expense Tracker
 
 Walletway is a comprehensive expense tracking application designed to help users manage their personal and group expenses efficiently. The application provides features such as adding expenses, viewing expense analytics, and managing group expenses.
@@ -59,3 +60,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 For any questions or feedback, please contact the repository owner at [your-email@example.com].
+=======
+# BudgetBuddy
+>>>>>>> a4fe68f7f71c685dc2ea0c619d25df945fb20500
