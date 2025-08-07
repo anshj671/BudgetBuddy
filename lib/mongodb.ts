@@ -9,9 +9,6 @@ const options = {
   maxPoolSize: 10,
   serverSelectionTimeoutMS: 5000,
   socketTimeoutMS: 45000,
-  bufferMaxEntries: 0,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
 }
 
 let client
