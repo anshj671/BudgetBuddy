@@ -51,7 +51,7 @@ export default function LoginPage() {
 
       toast({
         title: "Login successful",
-        description: "Welcome back to WalletWay!",
+        description: "Welcome back to BudgetBuddy!",
       })
 
       router.push("/dashboard")
@@ -70,7 +70,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-background to-background/80 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1 text-center">
-          <CardTitle className="text-3xl font-bold tracking-tight">WalletWay</CardTitle>
+          <CardTitle className="text-3xl font-bold tracking-tight">BudgetBuddy</CardTitle>
           <CardDescription>Sign in to your account to continue</CardDescription>
         </CardHeader>
         <CardContent>

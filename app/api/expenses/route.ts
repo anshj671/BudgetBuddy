@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     client = await clientPromise
     console.log('MongoDB client connected');
     
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const expenses = db.collection('expenses')
 
     const expense = await request.json()
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
 export async function GET() {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const expenses = db.collection('expenses')
 
     const allExpenses = await expenses.find({}).toArray()

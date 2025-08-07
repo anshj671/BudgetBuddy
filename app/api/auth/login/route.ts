@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
     // Connect to database
     const client = await clientPromise;
-    const db = client.db('wallet-way');
+    const db = client.db('budget-buddy');
     const users = db.collection('users');
 
     // Find user

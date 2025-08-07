@@ -16,7 +16,7 @@ export async function GET(request: Request) {
     }
 
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const settings = db.collection('userSettings')
 
     const userSettings = await settings.findOne({ userId })
@@ -46,7 +46,7 @@ export async function PUT(request: Request) {
     }
 
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const settings = db.collection('userSettings')
 
     // Update or insert user settings

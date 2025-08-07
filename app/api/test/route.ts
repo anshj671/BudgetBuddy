@@ -5,7 +5,7 @@ import { CollectionInfo } from 'mongodb'
 export async function GET() {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     
     // Test the connection by listing collections
     const collections = await db.listCollections().toArray()

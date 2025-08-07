@@ -8,7 +8,7 @@ export async function GET(
 ) {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const groups = db.collection('groups')
 
     const group = await groups.findOne({ _id: new ObjectId(params.id) })
@@ -39,7 +39,7 @@ export async function PUT(
 ) {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const groups = db.collection('groups')
 
     const updates = await request.json()
@@ -76,7 +76,7 @@ export async function DELETE(
 ) {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const groups = db.collection('groups')
 
     const result = await groups.deleteOne({ _id: new ObjectId(params.id) })

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Walletway - Expense Tracker
+# BudgetBuddy
 
-Walletway is a comprehensive expense tracking application designed to help users manage their personal and group expenses efficiently. The application provides features such as adding expenses, viewing expense analytics, and managing group expenses.
+BudgetBuddy is a comprehensive expense tracking application designed to help users manage their personal and group expenses efficiently. The application provides features such as adding expenses, viewing expense analytics, and managing group expenses.
 
 ## Features
 - Add and manage personal and group expenses
@@ -26,11 +24,11 @@ Walletway is a comprehensive expense tracking application designed to help users
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/wisky7206/Walletway---Expense-Tracker.git
+   git clone https://github.com/anshj671/BudgetBuddy.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Walletway---Expense-Tracker
+   cd BudgetBuddy
    ```
 3. Install the dependencies:
    ```bash
@@ -61,13 +59,3 @@ This project is licensed under the MIT License.
 
 ## Contact
 For any questions or feedback, please contact the repository owner at [your-email@example.com].
-=======
-# BudgetBuddy
->>>>>>> a4fe68f7f71c685dc2ea0c619d25df945fb20500
-=======
-   <<<<<<< HEAD
-   ...your local content...
-   =======
-   ...remote content...
-   >>>>>>> ...
->>>>>>> 997811b83829398a69eb7c0d4e7d8acfee285fee

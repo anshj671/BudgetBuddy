@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     client = await clientPromise
     console.log('MongoDB client connected');
     
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const groups = db.collection('groups')
 
     const group = await request.json()
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
 export async function GET() {
   try {
     const client = await clientPromise
-    const db = client.db('wallet-way')
+    const db = client.db('budget-buddy')
     const groups = db.collection('groups')
 
     const allGroups = await groups.find({}).toArray()
