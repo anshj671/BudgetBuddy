@@ -11,8 +11,8 @@ const options = {
   socketTimeoutMS: 45000,
 }
 
-let client
-let clientPromise: Promise<MongoClient>
+let client: MongoClient | undefined
+let clientPromise: Promise<MongoClient> | undefined
 
 if (process.env.NODE_ENV === 'development') {
   // In development mode, use a global variable so that the value
@@ -28,8 +28,16 @@ if (process.env.NODE_ENV === 'development') {
   clientPromise = globalWithMongo._mongoClientPromise
 } else {
   // In production mode, it's best to not use a global variable.
-  client = new MongoClient(uri, options)
-  clientPromise = client.connect()
+  try {
+    client = new MongoClient(uri, options)
+    clientPromise = client.connect()
+  } catch (error) {
+    console.error('Failed to create MongoDB client:', error)
+    // Don't throw during build time
+    if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+      throw error
+    }
+  }
 }
 
 // Export a module-scoped MongoClient promise. By doing this in a

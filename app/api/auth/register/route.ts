@@ -16,7 +16,14 @@ export async function POST(request: Request) {
 
     // Connect to database
     const client = await clientPromise;
-    const db = client.db('wallet-way');
+    if (!client) {
+      return NextResponse.json(
+        { error: 'Database connection not available' },
+        { status: 503 }
+      );
+    }
+    
+    const db = client.db('budget-buddy');
     const users = db.collection('users');
 
     // Check if user already exists

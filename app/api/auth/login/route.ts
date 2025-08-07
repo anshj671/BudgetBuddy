@@ -25,6 +25,13 @@ export async function POST(request: Request) {
 
     // Connect to database
     const client = await clientPromise;
+    if (!client) {
+      return NextResponse.json(
+        { error: 'Database connection not available' },
+        { status: 503 }
+      );
+    }
+    
     const db = client.db('budget-buddy');
     const users = db.collection('users');
 
